@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import { reviewBudget } from '../helpers';
 
 const BudgetControl = ({budget, calculate}) => {
     return ( 
@@ -6,7 +7,7 @@ const BudgetControl = ({budget, calculate}) => {
             <div className="alert alert-primary">
                 Budget: ${budget}
             </div>
-            <div className="alert">
+            <div className={reviewBudget(budget, calculate)}>
                 Calculate: ${calculate}
             </div>
         </Fragment>
