@@ -1,7 +1,7 @@
 import {Fragment, useState} from 'react';
 import Error from './Error';
 
-const Question = () => {
+const Question = ({saveBudget, saveCalculate}) => {
 
     // Define the state
     const [value, saveValue] = useState(0);
@@ -23,6 +23,8 @@ const Question = () => {
         }
 
         saveError(false);
+        saveBudget(value);
+        saveCalculate(value);
     }
 
     return ( 
